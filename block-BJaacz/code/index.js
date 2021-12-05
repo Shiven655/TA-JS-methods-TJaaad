@@ -3,15 +3,24 @@
 /*
   Create a function named addTwo which accepts a number, adds 2 to the number and return the new value.
 */
-
+let addTwo = function(num){
+  return num + 2;
+}
+console.log(addTwo);
 /*
   Create a function named addThree which accepts a number, adds 3 to the number and return the new value.
 */
-
+let addThree = function(num){
+  return num + 3;
+}
+console.log(addThree);
 /*
   Create a function named addFive which accepts a number, adds 5 to the number and return the new value.
 */
-
+let addFive = function(num){
+  return num + 5;
+}
+console.log(addFive);
 /*
   Create a function named addTwoToArray which accepts:
     - An array of numbers
