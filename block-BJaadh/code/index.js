@@ -11,8 +11,10 @@ Clone the array before using sort method: [...arr]
 */
 
 // - Find the index of `101` in numbers
+numbers[101];
 
 // - Find the last index of `9` in numbers
+number[9];
 
 // - Convert value of strings array into a sentance like "This is a collection of words"
 
