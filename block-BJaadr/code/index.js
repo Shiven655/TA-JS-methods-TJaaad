@@ -1,35 +1,77 @@
 // NOTE: You can only use the (reduce) array method to solve this exercise:
 
 function countAllPeople() {
-  // your code goes here
+  return got.houses.reduce((acc, cv) => {
+  acc = acc + cv.people.length;
+  return acc;
+  }, 0);
 }
 
 function peopleByHouses() {
-  // your code goes here
+  return got.houses.reduce((acc, cv) => {
+  acc[house.name] = house.people.length;
+  return acc;
+  }, []);
 }
 
 function everyone() {
-  // your code goes here
+  return got.houses.reduce((acc, house) => {
+  acc = acc.concat(house.people.map((p) => p.name));
+  return acc;
+  }, []);
 }
 
 function nameWithS() {
-  // your code goes here
+  return got.houses.reduce((acc, house) => {
+  acc = acc.concat(
+  house.people
+  .map((p) => p.name)
+  .filter((name) =>
+  name.toLowerCase().include("s")
+  )
+  );
+  return acc;
+  }, []);
 }
 
 function nameWithA() {
-  // your code goes here
+   let allpeople = everyone();
+   
+   return allpeople.filter((name) =>
+  name.toLowerCase().include("a")
+  );
 }
 
 function surnameWithS() {
-  // your code goes here
+  let allpeople = everyone();
+   
+   return allpeople.filter((name) =>
+  name.split("")[1].tolowerCase().include("s")
+  );
 }
 
 function surnameWithA() {
-  // your code goes here
+   return got.houses.reduce((acc, house) => {
+  acc = acc.concat(
+  house.people
+  .map((p) => p.name)
+  .filter((name) =>
+  name
+  .split("")[1]
+  .toLowerCase()
+  .include("a")
+  )
+  );
+  return acc;
+  }, []);
+}
 }
 
 function peopleNameOfAllHouses() {
-  // your code goes here
+   return got.houses.reduce((acc, house) => {
+  acc[house.name] = house.people.map((p) => p.name);
+  return acc;
+  }, []);
 }
 
 // Testing your result after writing your function
